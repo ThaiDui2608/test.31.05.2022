@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    let a = parseInt(prompt("Nhập số thứ nhất: "));
+    let b = parseInt(prompt("Nhập số thứ hai: "));
+
+    let x = a < b ? a : b;
+    let y = a > b ? a : b;
+
+    function check(num) {
+      if (num < 2) return false;
+
+      for (let i = 2; i < Math.sqrt(num); i++) {
+        if (num % i == 0) return false;
+      }
+      return true;
+    }
+
+    for (let i = x; i <= y; i++) {
+      if (check(i)) console.log(i);
+    }
+  </script>
+</html>
